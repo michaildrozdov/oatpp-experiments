@@ -175,12 +175,12 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="App.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="controller\basic_handler.h" />
-    <ClInclude Include="controller\dto_handler.h" />
-    <ClInclude Include="dto\single_string_dto.h" />
+    <ClInclude Include="controller\BasicHandler.hpp" />
+    <ClInclude Include="controller\DtoHandler.hpp" />
+    <ClInclude Include="dto\SingleStringDto.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
