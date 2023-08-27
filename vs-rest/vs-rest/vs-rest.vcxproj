@@ -177,6 +177,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="controller\basic_handler.h" />
+    <ClInclude Include="controller\dto_handler.h" />
+    <ClInclude Include="dto\single_string_dto.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

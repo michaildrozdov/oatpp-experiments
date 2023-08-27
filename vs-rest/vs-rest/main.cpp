@@ -4,65 +4,10 @@
 #include "oatpp/network/tcp/server/ConnectionProvider.hpp"
 
 #include "oatpp/core/macro/codegen.hpp"
+#include "controller/dto_handler.h"
 
 #pragma comment(lib,"WS2_32")
 
-/* Begin DTO code-generation */
-#include OATPP_CODEGEN_BEGIN(DTO)
-
-/**
- * Message Data-Transfer-Object
- */
-class MessageDto : public oatpp::DTO {
-
-	DTO_INIT(MessageDto, DTO /* Extends */);
-
-	DTO_FIELD(Int32, statusCode);   // Status code field
-	DTO_FIELD(String, message);     // Message field
-
-};
-
-/* End DTO code-generation */
-#include OATPP_CODEGEN_END(DTO)
-
-
-/**
- * Custom Request Handler
- */
-class Handler : public oatpp::web::server::HttpRequestHandler {
-public:
-
-	/**
-	 * Handle incoming request and return outgoing response.
-	 */
-	std::shared_ptr<OutgoingResponse> handle(const std::shared_ptr<IncomingRequest>& request) override {
-		return ResponseFactory::createResponse(Status::CODE_200, "Hello World!");
-	}
-
-};
-
-class JsonHandler : public oatpp::web::server::HttpRequestHandler {
-private:
-	std::shared_ptr<oatpp::data::mapping::ObjectMapper> m_objectMapper;
-public:
-	/**
-   * Constructor with object mapper.
-   * @param objectMapper - object mapper used to serialize objects.
-   */
-	JsonHandler(const std::shared_ptr<oatpp::data::mapping::ObjectMapper>& objectMapper)
-		: m_objectMapper(objectMapper)
-	{}
-
-	/**
-   * Handle incoming request and return outgoing response.
-   */
-	std::shared_ptr<OutgoingResponse> handle(const std::shared_ptr<IncomingRequest>& request) override {
-		auto message = MessageDto::createShared();
-		message->statusCode = 1024;
-		message->message = "Hello DTO!";
-		return ResponseFactory::createResponse(Status::CODE_200, message, m_objectMapper);
-	}
-};
 
 void run() {
 
@@ -70,12 +15,12 @@ void run() {
 	auto router = oatpp::web::server::HttpRouter::createShared();
 
 	/* Route GET - "/hello" requests to Handler */
-	//router->route("GET", "/hello", std::make_shared<Handler>());
+	//router->route("GET", "/hello", std::make_shared<BasicHandler>());
 
 	/* Create json object mapper */
 	auto objectMapper = oatpp::parser::json::mapping::ObjectMapper::createShared();
 
-	router->route("GET", "/hello", std::make_shared<JsonHandler>(objectMapper));
+	router->route("GET", "/hello", std::make_shared<DtoHandler>(objectMapper));
 
 	/* Create HTTP connection handler with router */
 	auto connectionHandler = oatpp::web::server::HttpConnectionHandler::createShared(router);
