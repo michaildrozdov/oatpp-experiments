@@ -1,5 +1,5 @@
 #include "AppComponent.hpp"
-#include "controller/DtoHandler.hpp"
+#include "controller/MyController.hpp"
 
 AppComponent::AppComponent()
 {
@@ -25,7 +25,8 @@ AppComponent::AppComponent()
 	 */
 	m_createdDependencies.objectMapper = oatpp::parser::json::mapping::ObjectMapper::createShared();
 
-	m_createdDependencies.httpRouter->route("GET", "/hello", std::make_shared<DtoHandler>(m_createdDependencies.objectMapper));
+	auto myController = std::make_shared<MyController>(m_createdDependencies.objectMapper);
+	m_createdDependencies.httpRouter->addController(myController);
 }
 
 const DependenciesContainer &AppComponent::getAppDependencies() const

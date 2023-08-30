@@ -44,5 +44,8 @@
     <ClInclude Include="MyServer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="controller\MyController.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
