@@ -1,9 +1,13 @@
 #include "MyServer.hpp"
+#include "controller/MyController.hpp"
 #include "oatpp/network/Server.hpp"
 
 MyServer::MyServer(const DependenciesContainer& dependencies)
 {
 	m_dependencies = dependencies;
+
+	auto myController = std::make_shared<MyController>(m_dependencies.objectMapper);
+	m_dependencies.httpRouter->addController(myController);
 }
 
 void MyServer::run()

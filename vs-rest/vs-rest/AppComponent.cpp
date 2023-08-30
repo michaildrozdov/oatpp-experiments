@@ -1,5 +1,4 @@
 #include "AppComponent.hpp"
-#include "controller/MyController.hpp"
 
 AppComponent::AppComponent()
 {
@@ -24,9 +23,6 @@ AppComponent::AppComponent()
 	 *  Create ObjectMapper component to serialize/deserialize DTOs in Contoller's API
 	 */
 	m_createdDependencies.objectMapper = oatpp::parser::json::mapping::ObjectMapper::createShared();
-
-	auto myController = std::make_shared<MyController>(m_createdDependencies.objectMapper);
-	m_createdDependencies.httpRouter->addController(myController);
 }
 
 const DependenciesContainer &AppComponent::getAppDependencies() const
