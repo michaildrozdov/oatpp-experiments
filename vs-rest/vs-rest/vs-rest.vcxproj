@@ -176,11 +176,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="AppComponent.cpp" />
+    <ClCompile Include="MyServer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AppComponent.hpp" />
     <ClInclude Include="controller\BasicHandler.hpp" />
     <ClInclude Include="controller\DtoHandler.hpp" />
-    <ClInclude Include="dto\SingleStringDto.hpp" />
+    <ClInclude Include="DependenciesContainer.hpp" />
+    <ClInclude Include="dto\Dtos.hpp" />
+    <ClInclude Include="MyServer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

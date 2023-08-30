@@ -1,5 +1,5 @@
-#ifndef SINGLE_STRING_DTO_H_INCLUDED
-#define SINGLE_STRING_DTO_H_INCLUDED
+#ifndef DTOS_H_INCLUDED
+#define DTOS_H_INCLUDED
 
 /* Begin DTO code-generation */
 #include OATPP_CODEGEN_BEGIN(DTO)
@@ -19,4 +19,4 @@ class SingleStringDto : public oatpp::DTO {
 /* End DTO code-generation */
 #include OATPP_CODEGEN_END(DTO)
 
-#endif // SINGLE_STRING_DTO_H_INCLUDED
+#endif // DTOS_H_INCLUDED

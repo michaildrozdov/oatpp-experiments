@@ -2,7 +2,7 @@
 #define DTO_HANDLER_H_INCLUDED
 
 #include "oatpp/web/server/HttpConnectionHandler.hpp"
-#include "../dto/SingleStringDto.hpp"
+#include "../dto/Dtos.hpp"
 
 class DtoHandler : public oatpp::web::server::HttpRequestHandler {
 private:
