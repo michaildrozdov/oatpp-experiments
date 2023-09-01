@@ -3,13 +3,13 @@
 
 #include "oatpp/parser/json/mapping/ObjectMapper.hpp"
 
-#include "DependenciesContainer.hpp"
+#include "../src/DependenciesContainer.hpp"
 
-class AppComponent
+class TestComponent
 {
 public:
-	AppComponent();
-	~AppComponent() = default;
+	TestComponent();
+	~TestComponent() = default;
 	const DependenciesContainer &getAppDependencies() const;
 private:
 	DependenciesContainer m_createdDependencies;

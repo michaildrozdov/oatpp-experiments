@@ -1,8 +1,8 @@
 #include "oatpp/web/server/HttpConnectionHandler.hpp"
 #include "oatpp/parser/json/mapping/ObjectMapper.hpp"
 #include "oatpp/network/Server.hpp"
-#include "MyServer.hpp"
-#include "AppComponent.hpp"
+#include "../src/MyServer.hpp"
+#include "TestComponent.hpp"
 
 #pragma comment(lib,"WS2_32")
 
@@ -12,7 +12,7 @@ int main() {
 	oatpp::base::Environment::init();
 
 	/* AppComponent class implicitly creates all needed components to run the app*/
-	AppComponent appComponents;
+	TestComponent appComponents;
 	MyServer server(appComponents.getAppDependencies());
 
 	/* Run App */

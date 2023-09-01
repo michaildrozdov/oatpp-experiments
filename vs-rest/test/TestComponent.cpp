@@ -1,6 +1,6 @@
-#include "AppComponent.hpp"
+#include "TestComponent.hpp"
 
-AppComponent::AppComponent()
+TestComponent::TestComponent()
 {
 	/**
    *  Create ConnectionProvider component which listens on the port
@@ -25,7 +25,7 @@ AppComponent::AppComponent()
 	m_createdDependencies.objectMapper = oatpp::parser::json::mapping::ObjectMapper::createShared();
 }
 
-const DependenciesContainer &AppComponent::getAppDependencies() const
+const DependenciesContainer & TestComponent::getAppDependencies() const
 {
 	return m_createdDependencies;
 }

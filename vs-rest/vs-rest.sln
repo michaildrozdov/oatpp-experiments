@@ -9,6 +9,8 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		oatpp-app-test|x64 = oatpp-app-test|x64
+		oatpp-app-test|x86 = oatpp-app-test|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
@@ -17,6 +19,10 @@ Global
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x64.Build.0 = Debug|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x86.ActiveCfg = Debug|Win32
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x86.Build.0 = Debug|Win32
+		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x64.ActiveCfg = oatpp-app-test|x64
+		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x64.Build.0 = oatpp-app-test|x64
+		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x86.ActiveCfg = oatpp-app-test|Win32
+		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x86.Build.0 = oatpp-app-test|Win32
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x64.ActiveCfg = Release|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x64.Build.0 = Release|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x86.ActiveCfg = Release|Win32
