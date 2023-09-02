@@ -1,6 +1,9 @@
 #ifndef DTOS_H_INCLUDED
 #define DTOS_H_INCLUDED
 
+#include "oatpp/parser/json/mapping/ObjectMapper.hpp"
+#include "oatpp/core/macro/codegen.hpp"
+
 /* Begin DTO code-generation */
 #include OATPP_CODEGEN_BEGIN(DTO)
 

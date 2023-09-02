@@ -1,5 +1,4 @@
 #include "oatpp/web/server/HttpConnectionHandler.hpp"
-#include "oatpp/parser/json/mapping/ObjectMapper.hpp"
 #include "oatpp/network/Server.hpp"
 #include "MyServer.hpp"
 #include "AppComponent.hpp"

@@ -1,22 +1,34 @@
-#include "oatpp/web/server/HttpConnectionHandler.hpp"
-#include "oatpp/parser/json/mapping/ObjectMapper.hpp"
-#include "oatpp/network/Server.hpp"
+#include "MyControllerTest.hpp"
+
+#include <iostream>
 #include "../src/MyServer.hpp"
 #include "TestComponent.hpp"
 
 #pragma comment(lib,"WS2_32")
+
+void runTests() {
+
+	OATPP_RUN_TEST(MyControllerTest);
+
+	// TODO - Add more tests here:
+	// OATPP_RUN_TEST(MyAnotherTest);
+
+}
 
 int main() {
 
 	/* Init oatpp Environment */
 	oatpp::base::Environment::init();
 
-	/* AppComponent class implicitly creates all needed components to run the app*/
-	TestComponent appComponents;
-	MyServer server(appComponents.getAppDependencies());
+	runTests();
 
-	/* Run App */
-	server.run();
+	/* Print how much objects were created during app running, and what have left-probably leaked */
+	/* Disable object counting for release builds using '-D OATPP_DISABLE_ENV_OBJECT_COUNTERS' flag for better performance */
+	std::cout << "\nEnvironment:\n";
+	std::cout << "objectsCount = " << oatpp::base::Environment::getObjectsCount() << "\n";
+	std::cout << "objectsCreated = " << oatpp::base::Environment::getObjectsCreated() << "\n\n";
+
+	OATPP_ASSERT(oatpp::base::Environment::getObjectsCount() == 0);
 
 	/* Destroy oatpp Environment */
 	oatpp::base::Environment::destroy();

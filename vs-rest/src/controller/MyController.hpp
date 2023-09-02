@@ -21,6 +21,7 @@ public:
 	MyController(std::shared_ptr<ObjectMapper> objectMapper)
 		: oatpp::web::server::api::ApiController(objectMapper)
 	{}
+
 public:
 
 	ENDPOINT("GET", "/hello", root) {

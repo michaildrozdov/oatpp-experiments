@@ -18,15 +18,11 @@ Global
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x64.ActiveCfg = Debug|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x64.Build.0 = Debug|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x86.ActiveCfg = Debug|Win32
-		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Debug|x86.Build.0 = Debug|Win32
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x64.ActiveCfg = oatpp-app-test|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x64.Build.0 = oatpp-app-test|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x86.ActiveCfg = oatpp-app-test|Win32
-		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.oatpp-app-test|x86.Build.0 = oatpp-app-test|Win32
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x64.ActiveCfg = Release|x64
-		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x64.Build.0 = Release|x64
 		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x86.ActiveCfg = Release|Win32
-		{FF685AE8-A921-4CCA-BAA2-C62EC7A2DBA9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
