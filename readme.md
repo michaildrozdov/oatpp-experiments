@@ -11,3 +11,10 @@ I followed the step-by-step tutorial from https://oatpp.io/docs/start/step-by-st
 
 # Lessons learned
 Just by looking at this particular starter project it seems that all the work with the library has to be done by using an extensive macro web - there is just no other choice. At first the naive implementation of a service is shown for a brief moment just to move to all the components macro practices needed for the dependency injection. At some point it seemed like I could make some simpler implementation solving the issues DI solves but without scary macros. This failed spectacularly when I found out that the unit test implementation relies on a particular DI implemented by the library under the hood. For now the presented DI framework seems like global variables just the other way but I'll have to see how powerfull it really is by implementing some more interesting services.
+
+# Warning!
+This repository isn't meant for anyone to reproduce but this is how it would be done. After cloning it:
+```
+git submodule update --init
+```
+then follow instructions to build Oat++ on Windows https://oatpp.io/docs/installation/windows/ from the newly created submodule directory. All the paths in the project should be relaive and point to various dirs of this submodule, so it should work for anyone. When the solution builds it should build two targets (debug and test). The server and the endpoint will run just fine but the unit test will crash because of the reasons mentioned in previous section.
